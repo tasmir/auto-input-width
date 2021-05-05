@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Md. Tasmir Ahmed Rokon">
+	<meta name="Keywords" content="HTML,CSS,JavaScript,SQL,PHP,jQuery,XML,DOM,Bootstrap,Python,Java,Web development,tutorials,programming,learning,examples,source code,demos,tips,input auto adjust,input width dynamic,Resize Input">
+	<meta name="Description" content="Well organized and easy to understand Web building helpink kit.">
+	<title>Auto Input Width</title>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+	<link rel="stylesheet" href="./css/normalize.min.css">
+	<style>
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		.input-sizer {
+			display: inline-grid;
+			vertical-align: top;
+			align-items: center;
+			position: relative;
+			border: solid 1px;
+			padding: 0.25em 0.5em;
+			margin: 5px;
+		}
+		.input-sizer.stacked {
+			padding: 0.5em;
+			align-items: stretch;
+		}
+		.input-sizer.stacked::after,
+		.input-sizer.stacked input,
+		.input-sizer.stacked textarea {
+			grid-area: 2/1;
+		}
+		.input-sizer::after,
+		.input-sizer input,
+		.input-sizer textarea {
+			width: auto;
+			min-width: 1em;
+			grid-area: 1/2;
+			font: inherit;
+			padding: 0.25em;
+			margin: 0;
+			resize: none;
+			background: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border: none;
+		}
+		.input-sizer span {
+			padding: 0.25em;
+		}
+		.input-sizer::after {
+			content: attr(data-value) " ";
+			visibility: hidden;
+			white-space: pre-wrap;
+		}
+		.input-sizer:focus-within {
+			outline: solid 1px blue;
+			/*box-shadow: 4px 4px 0px blue;*/
+		}
+		.input-sizer:focus-within > span {
+			color: blue;
+		}
+		.input-sizer:focus-within textarea:focus,
+		.input-sizer:focus-within input:focus {
+			outline: none;
+		}
+
+		.input-sizer {
+			/*box-shadow: 4px 4px 0px #000;*/
+		}
+		.input-sizer > span {
+			text-transform: uppercase;
+			font-size: 0.8em;
+			font-weight: bold;
+			/*text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);*/
+		}
+
+		/* ---------------------------------- */
+	</style>
+
+	<script>
+		window.console = window.console || function(t) {};
+	</script>
+
+
+
+	<script>
+		if (document.location.search.match(/type=embed/gi)) {
+			window.parent.postMessage("resize", "*");
+		}
+	</script>
+
+
+	<meta property="og:image" content="assets/img/fb.jpg" />
+	<meta property="og:type" content="website" /> 
+	<meta property="og:url" content="https://tasmir.info" />
+	<meta property="og:title" content="Md. Tasmir Ahmed Rokon" />
+	<meta property="og:description" content="Md. Tasmir Ahmed Rokon, Tasmir, Rokon, Programmer, PHP Developer, Laravel Developer, Web Devloper, Back-End Developer, Android-UI Developer, Front-End Developer" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154810930-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-154810930-1');
+	</script>
+
+
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body translate="no" data-new-gr-c-s-check-loaded="14.1008.0" data-gr-ext-installed="">
+	<label class="input-sizer">
+		<span>Name: </span>
+		<input type="text" oninput="this.parentNode.dataset.value = this.value" size="4" placeholder="John">
+	</label>
+
+	<label class="input-sizer">
+		<span>DOB: </span>
+		<input type="text" oninput="this.parentNode.dataset.value = this.value" size="1" placeholder="5">
+	</label>
+
+	<label class="input-sizer stacked">
+		<span>Text: </span>
+		<textarea oninput="this.parentNode.dataset.value = this.value" rows="1" placeholder="hi"></textarea>
+	</label>
+</body>
+</html>
