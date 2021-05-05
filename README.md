@@ -99,7 +99,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 ```
 
-
+## Complete Model
 ```
 <html lang="en">
 <head>
@@ -110,16 +110,16 @@
 
 	<title>Auto Input Width</title>
 
-	DEPENDENCY PART
+	** DEPENDENCY PART ** 
 
-	STYLE PART
+	** STYLE PART ** 
 
-	SCRIPT PART
+	** SCRIPT PART ** 
 
 </head>
 
 <body translate="no" data-new-gr-c-s-check-loaded="14.1008.0" data-gr-ext-installed="">
-	HTML PART
+	** HTML PART ** 
 </body>
 </html>
 ```
