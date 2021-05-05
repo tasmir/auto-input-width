@@ -1,5 +1,5 @@
 # auto-input-width
-[View Live Demo](http://auto-input-width.bdroutines.com)
+[View Live Demo](http://auto-input-width.bdroutines.com) or [View Live Demo](https://tasmir.github.io/auto-input-width/index.html)
 
 ### HTML
 ```
