@@ -1,7 +1,7 @@
 # auto-input-width
 [View Live Demo](http://auto-input-width.bdroutines.com)
 
-- [ ] HTML
+### HTML
 ```
 <label class="input-sizer">
 	<span>Name: </span>
@@ -17,7 +17,7 @@
 </label>
 ```
 
-- [ ] SCRIPT
+### SCRIPT
 ```
 <script>
 	window.console = window.console || function(t) {};
@@ -27,7 +27,7 @@
 </script>
 ```
 
-- [ ] STYLE
+### STYLE
 ```
 <style>
 	*, *::before, *::after {
@@ -94,7 +94,7 @@
 </style>
 ```
 
-- [ ] DEPENDENCY
+### DEPENDENCY
 ```
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 ```
